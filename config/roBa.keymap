@@ -62,6 +62,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        macro0: macro0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INT_MUHENKAN &kp LS(Q) &kp LS(Z) &kp U &kp G &kp X &kp NUMBER_2 &kp J &kp I &kp R &kp LS(R)>;
+            label = "MACRO0";
+        };
+
+        macro1: macro1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MACRO1";
+        };
     };
 
     behaviors {
@@ -109,7 +123,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(ASTERISK))    &kp PLUS        &kp LC(MINUS)            &kp EQUAL                      &kp PRINTSCREEN  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH
+&macro0         &kp LC(LS(ASTERISK))    &kp PLUS        &kp LC(MINUS)            &kp EQUAL                      &kp PRINTSCREEN  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH
 &kp HOME        &kp LS(LC(R))           &kp DOWN_ARROW  &kp LG(NUMBER_4)         &kp RCTRL  &trans      &trans  &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans     &trans      &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA
 &trans          &trans                  &trans          &trans                   &trans     &trans      &trans  &trans                                                              &trans
@@ -120,10 +134,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
