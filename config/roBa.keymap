@@ -73,8 +73,22 @@
         macro1: macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp N1 &kp N1 &kp N4 &kp N1 &kp N0 &kp N9 &kp N2>;
             label = "MACRO1";
+        };
+
+        macro2: macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INT_MUHENKAN &kp LEFT_ALT &kp F &kp A &kp B>;
+            label = "MACRO2";
+        };
+
+        macro3: macro3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INT_MUHENKAN &kp LEFT_ALT &kp H &kp F &kp F &kp M &kp E &kp I &kp R &kp Y &kp O &kp SPACE &kp U &kp I &kp ENTER>;
+            label = "MACRO3";
         };
     };
 
@@ -107,8 +121,8 @@
             bindings = <
 &kp LC(W)       &kp F2          &kp F3  &kp F4    &kp F5                         &kp LC(X)  &kp F7              &kp LC(PAGE_UP)     &kp LC(PAGE_DOWN)    &kp LC(LS(KP_NUMBER_1))
 &kp LEFT_SHIFT  &kp LC(T)       &kp F6  &mkp MB1  &kp F12  &trans      &kp HOME  &kp LC(C)  &kp LC(LS(TAB))     &kp LG(UP_ARROW)    &kp LC(TAB)          &kp LC(KP_NUMBER_1)
-&kp LC(LS(C))   &trans          &trans  &mkp MB2  &trans   &trans      &kp END   &kp LC(V)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &kp EXCLAMATION
-&trans          &kp KP_NUMLOCK  &trans  &trans    &trans   &trans      &trans    &trans                                                                  &kp QUESTION
+&kp LC(LS(C))   &trans          &trans  &mkp MB2  &macro2  &trans      &kp END   &kp LC(V)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &kp EXCLAMATION
+&macro3         &kp KP_NUMLOCK  &trans  &trans    &trans   &trans      &trans    &trans                                                                  &kp QUESTION
             >;
         };
 
@@ -124,7 +138,7 @@
         ARROW {
             bindings = <
 &macro0         &kp LC(LS(ASTERISK))    &kp PLUS        &kp LC(MINUS)            &kp EQUAL                          &kp PRINTSCREEN  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH
-&kp HOME        &kp LS(LC(R))           &kp DOWN_ARROW  &kp LG(NUMBER_4)         &kp RCTRL  &trans      &trans      &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA
+&macro1         &kp LS(LC(R))           &kp DOWN_ARROW  &kp LG(NUMBER_4)         &kp RCTRL  &trans      &trans      &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans     &trans      &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA
 &trans          &trans                  &trans          &trans                   &trans     &trans      &kp DELETE  &kp COLON                                                           &trans
             >;
@@ -143,10 +157,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp RCTRL  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &trans
+&trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LCTRL      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans                          &trans
             >;
         };
 
