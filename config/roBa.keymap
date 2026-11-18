@@ -96,11 +96,11 @@
             bindings = <
 &kp Q             &kp W    &kp E         &kp R                             &kp T                                                                         &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &mt LCTRL A       &kp S    &kp D         &lt 2 F                           &lt 3 G      &none                                 &lt 6 LANG_ZENKAKUHANKAKU  &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X    &kp C         &kp V                             &kp B        &kp COLON                             &kp SEMICOLON              &kp N        &kp M  &kp COMMA  &kp DOT  &mkp MB1
+&mt LEFT_SHIFT Z  &kp X    &kp C         &kp V                             &kp B        &lt 6 PRINTSCREEN                     &kp SEMICOLON              &kp N        &kp M  &kp COMMA  &kp DOT  &mkp MB1
 &kp LEFT_SHIFT    &kp TAB  &kp LEFT_WIN  &lt_to_layer_0 6 INTERNATIONAL_5  &lt 1 SPACE  &lt_to_layer_0 3 INTERNATIONAL_4      &kp BACKSPACE              &lt 2 ENTER                             &mkp MB2
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         FUNCTION {
@@ -123,10 +123,10 @@
 
         ARROW {
             bindings = <
-&macro0         &kp LC(LS(ASTERISK))    &kp PLUS        &kp LC(MINUS)            &kp EQUAL                      &kp PRINTSCREEN  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH
-&kp HOME        &kp LS(LC(R))           &kp DOWN_ARROW  &kp LG(NUMBER_4)         &kp RCTRL  &trans      &trans  &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans     &trans      &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA
-&trans          &trans                  &trans          &trans                   &trans     &trans      &trans  &trans                                                              &trans
+&macro0         &kp LC(LS(ASTERISK))    &kp PLUS        &kp LC(MINUS)            &kp EQUAL                          &kp PRINTSCREEN  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH
+&kp HOME        &kp LS(LC(R))           &kp DOWN_ARROW  &kp LG(NUMBER_4)         &kp RCTRL  &trans      &trans      &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COMMA
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans     &trans      &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA
+&trans          &trans                  &trans          &trans                   &trans     &trans      &kp DELETE  &kp COLON                                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -143,10 +143,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp RCTRL  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &trans
             >;
         };
 
